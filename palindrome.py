@@ -14,32 +14,29 @@ def remove_extra_spaces(phrase_entered):
             phrase_clean += char
     return phrase_clean
 
-phrase_clean = remove_extra_spaces(phrase_entered)
-print(phrase_clean) #checking here
+phrase_new = remove_extra_spaces(phrase_entered).lower()
     
 # function that reverses original string and returns that reverse
-def reverse_phrase(phrase_clean):
+def reverse_phrase(phrase_new):
     """This function reverses the phrase entered and returns that reversed phrase"""
-    return phrase_clean[::-1]
+    return phrase_new[::-1]
 
 # defines phrase backwards using the reverse_phrase function
-phrase_backwards = reverse_phrase(phrase_clean)
+phrase_backwards = reverse_phrase(phrase_new)
 # print(phrase_backwards) <----this was testing if it worked
-
-palindrome = True #is this needed or useful?
 
 # compare string to reverse of string, make function to do it?
 # print response that confirms palindrome or not "is a palindrome" or "is not a palindrome"
-def palindrome(phrase_clean, phrase_backwards):
+def palindrome(phrase_new, phrase_backwards):
     """This function let's you know if you've entered a palindrome or not"""
-    if phrase_backwards == phrase_clean:
-        palindrome = True
-        print("This here is a palindrome: ", phrase_clean, phrase_backwards)
+    if phrase_backwards == phrase_new:
+        # palindrome = True
+        print("This here is a palindrome: ", phrase_new, phrase_backwards)
     else:
-        palindrome = False
-        print("This here is not a palindrome: ", phrase_clean, phrase_backwards)
+        # palindrome = False
+        print("This here is not a palindrome: ", phrase_new, phrase_backwards)
 
-palindrome(phrase_clean, phrase_backwards)
+palindrome(phrase_new, phrase_backwards)
 
 # palindrome = True
 # def palindrome():
